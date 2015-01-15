@@ -100,6 +100,7 @@
         
         CGRect fromRect = toRect;
         fromRect.origin.y = CGRectGetHeight(self.bounds);
+        fromRect.origin.x = (CGRectGetWidth(self.bounds) - menuButtonWidth)/2;
         if (!menuButton) {
             menuButton = [[MenuButton alloc] initWithFrame:fromRect menuItem:menuItem];
             menuButton.tag = kMenuButtonBaseTag + index;
